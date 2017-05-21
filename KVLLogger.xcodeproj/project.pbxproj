@@ -18,6 +18,8 @@
 		C6111EF31ECDD3FC00D0A216 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6111EED1ECDD3FC00D0A216 /* String+Extensions.swift */; };
 		C6111EFA1ECDDC5B00D0A216 /* KVLObjCExceptionGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = C6111EF91ECDDC5B00D0A216 /* KVLObjCExceptionGenerator.m */; };
 		C6111EFC1ECDEFC500D0A216 /* KVLLogger.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C6111EFB1ECDEFC500D0A216 /* KVLLogger.podspec */; };
+		C6111F001ED1733100D0A216 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C6111EFE1ED1733100D0A216 /* LICENSE */; };
+		C6111F011ED1733100D0A216 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C6111EFF1ED1733100D0A216 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		C6111EF81ECDDC5B00D0A216 /* KVLObjCExceptionGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVLObjCExceptionGenerator.h; sourceTree = "<group>"; };
 		C6111EF91ECDDC5B00D0A216 /* KVLObjCExceptionGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVLObjCExceptionGenerator.m; sourceTree = "<group>"; };
 		C6111EFB1ECDEFC500D0A216 /* KVLLogger.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KVLLogger.podspec; sourceTree = "<group>"; };
+		C6111EFE1ED1733100D0A216 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		C6111EFF1ED1733100D0A216 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +91,7 @@
 		C6111EAC1ECDD2F700D0A216 = {
 			isa = PBXGroup;
 			children = (
-				C6111EFB1ECDEFC500D0A216 /* KVLLogger.podspec */,
+				C6111EFD1ED1731900D0A216 /* Spec */,
 				C6111EE61ECDD35500D0A216 /* KVLLogger */,
 				C6111EB71ECDD2F700D0A216 /* KVLLogger */,
 				C6111ECC1ECDD2F700D0A216 /* KVLLoggerTests */,
@@ -164,6 +168,16 @@
 				C6111EED1ECDD3FC00D0A216 /* String+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C6111EFD1ED1731900D0A216 /* Spec */ = {
+			isa = PBXGroup;
+			children = (
+				C6111EFE1ED1733100D0A216 /* LICENSE */,
+				C6111EFF1ED1733100D0A216 /* README.md */,
+				C6111EFB1ECDEFC500D0A216 /* KVLLogger.podspec */,
+			);
+			name = Spec;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +292,7 @@
 				C6111EC01ECDD2F700D0A216 /* Assets.xcassets in Resources */,
 				C6111EFC1ECDEFC500D0A216 /* KVLLogger.podspec in Resources */,
 				C6111EBE1ECDD2F700D0A216 /* Main.storyboard in Resources */,
+				C6111F001ED1733100D0A216 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6111F011ED1733100D0A216 /* README.md in Sources */,
 				C6111EE91ECDD35500D0A216 /* KVLLogger.swift in Sources */,
 				C6111EBB1ECDD2F700D0A216 /* ViewController.swift in Sources */,
 				C6111EF31ECDD3FC00D0A216 /* String+Extensions.swift in Sources */,
