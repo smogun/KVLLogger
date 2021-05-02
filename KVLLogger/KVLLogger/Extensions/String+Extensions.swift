@@ -10,24 +10,17 @@ import Foundation
 
 public extension String
 {
-    public var pathExtension: String?
+    var pathExtension: String?
     {
         return URL(fileURLWithPath: self).pathExtension;
     }
-    public var lastPathComponent: String?
+    var lastPathComponent: String?
     {
         return URL(fileURLWithPath: self).lastPathComponent;
     }
-    public var stringByDeletingPathExtension: String?
+    var stringByDeletingPathExtension: String?
     {
-        do
-        {
-            return try String(contentsOf: URL(fileURLWithPath: self).deletingPathExtension());
-        }
-        catch
-        {
-            return self;
-        }
+        return URL(fileURLWithPath: self).deletingPathExtension().lastPathComponent
     }
     
 }

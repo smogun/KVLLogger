@@ -115,32 +115,32 @@ class ViewController: UIViewController {
         return view
     }
     
-    internal func printNormalMessageLog()
+    @objc internal func printNormalMessageLog()
     {
         KVLLogger.printNormalMessage(self.getNewUniqueText(type: "NORMAL"), location: GetCodeLocation())
     }
     
-    internal func printSuccessMessageLog()
+    @objc internal func printSuccessMessageLog()
     {
         KVLLogger.printSuccessMessage(self.getNewUniqueText(type: "SUCCESS"), location: GetCodeLocation())
     }
     
-    internal func printWarningMessageLog()
+    @objc internal func printWarningMessageLog()
     {
         KVLLogger.printWarningMessage(self.getNewUniqueText(type: "WARNING"), location: GetCodeLocation())
     }
     
-    internal func printErrorMessageLog()
+    @objc internal func printErrorMessageLog()
     {
         KVLLogger.printErrorMessage(self.getNewUniqueText(type: "ERROR"), location: GetCodeLocation())
     }
     
-    internal func printErrorLog()
+    @objc internal func printErrorLog()
     {
         KVLLogger.printError(self.getErrorObject(), location: GetCodeLocation())
     }
     
-    internal func printException()
+    @objc internal func printException()
     {
         KVLLogger.printException(self.getExsceptionObject(), location: GetCodeLocation())
     }

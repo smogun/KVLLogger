@@ -14,7 +14,7 @@ public typealias WHERE = String
 /****************************************************************************************/
 public func GetCodeLocation(_ file: String = #file, function: String = #function, line: Int = #line, col: Int = #column) -> WHERE!
 {
-    return String(format: "%@:%@{%d:%d}", file.lastPathComponent!.stringByDeletingPathExtension!, function, line, col)
+    return String(format: "%@:%@{%d:%d}", URL(fileURLWithPath: file).deletingPathExtension().lastPathComponent, function, line, col)
 }
 
 
@@ -28,27 +28,27 @@ open class KVLLogger: NSObject
             withVaList(args) { NSLogv(format, $0) }
         //#endif
     }
-    open class func printErrorMessage(_ message: String?, location: WHERE?)
+    @objc open class func printErrorMessage(_ message: String?, location: WHERE?)
     {
         printLogMessage("⛔️ %@ >>> %@", location == nil ? "" : location!, message == nil ? "" : message!)
     }
     
-    open class func printWarningMessage(_ message: String?, location: WHERE?)
+    @objc open class func printWarningMessage(_ message: String?, location: WHERE?)
     {
         printLogMessage("⚠️ %@ >>> %@", location == nil ? "" : location!, message == nil ? "" : message!)
     }
     
-    open class func printSuccessMessage(_ message: String?, location: WHERE?)
+    @objc open class func printSuccessMessage(_ message: String?, location: WHERE?)
     {
         printLogMessage("✅ %@ >>> %@", location == nil ? "" : location!, message == nil ? "" : message!)
     }
     
-    open class func printNormalMessage(_ message: String?, location: WHERE?)
+    @objc open class func printNormalMessage(_ message: String?, location: WHERE?)
     {
         printLogMessage("➕ %@ >>> %@", location == nil ? "" : location!, message == nil ? "" : message!)
     }
     
-    open class func printError(_ error: NSError?, location: WHERE?)
+    @objc open class func printError(_ error: NSError?, location: WHERE?)
     {
         if (error == nil)
         {
@@ -68,7 +68,7 @@ open class KVLLogger: NSObject
             userInfo == nil ? "" : userInfo as! NSDictionary), location: location == nil ? "" : location!);
     }
     
-    open class func printException(_ exception: NSException?, location: WHERE?)
+    @objc open class func printException(_ exception: NSException?, location: WHERE?)
     {
         if (exception == nil)
         {
